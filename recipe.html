@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recipe | Peachy Plate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=DM+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --pink: #FDE2E4;
+      --cream: #FFF8EC;
+      --peach: #FFD6A5;
+      --butter: #FFF1B8;
+      --sage: #CFE3C8;
+      --lavender: #E3D9F2;
+      --text: #5A4A42;
+      --accent: #C77D6B;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      line-height: 1.5;
+    }
+    nav {
+      padding: 12px;
+      background: var(--lavender);
+      text-align: center;
+    }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 20px;
+      background: var(--cream);
+      font-size: 0.95rem;
+    }
+    .wrap { max-width: 700px; margin: 0 auto; padding: 20px 18px 40px; }
+    h1, h2 { font-family: 'Playfair Display', serif; }
+    h1 { font-size: 2rem; margin: 16px 0 6px; }
+    h2 { font-size: 1.4rem; margin: 28px 0 10px; }
+    .hero {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 20px;
+      display: block;
+    }
+    .cat {
+      display: inline-block;
+      background: var(--peach);
+      padding: 4px 14px;
+      border-radius: 16px;
+      font-size: 0.85rem;
+    }
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .meta div {
+      background: var(--butter);
+      border-radius: 14px;
+      padding: 10px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    .meta b { display: block; font-size: 1.1rem; }
+    .box {
+      background: #fff;
+      border-radius: 18px;
+      padding: 8px 18px;
+      box-shadow: 0 4px 12px rgba(90, 74, 66, 0.1);
+    }
+    .box ul, .box ol { padding-left: 20px; }
+    .box li { padding: 6px 0; }
+    .tip {
+      background: var(--sage);
+      border-radius: 16px;
+      padding: 12px 16px;
+    }
+    .note {
+      background: var(--lavender);
+      border-radius: 16px;
+      padding: 12px 16px;
+      font-size: 0.9rem;
+    }
+    .source { font-size: 0.85rem; margin-top: 24px; }
+  </style>
+</head>
+<body>
+  <nav><a href="index.html">Back to Peachy Plate</a></nav>
+  <div class="wrap" id="app"></div>
+
+  <script src="recipes.js"></script>
+  <script>
+    const app = document.getElementById("app");
+    const id = new URLSearchParams(window.location.search).get("id");
+    const r = RECIPES.find(function (x) { return x.id === id; });
+
+    if (!r) {
+      app.innerHTML = "<h1>Recipe not found</h1><p>Please go back and choose another recipe.</p>";
+    } else {
+      document.title = r.name + " | Peachy Plate";
+
+      const ingredients = r.ingredients.map(function (i) {
+        const unit = i.unit ? " " + i.unit : "";
+        return "<li><b>" + i.qty + unit + "</b> " + i.name + "</li>";
+      }).join("");
+
+      const steps = r.steps.map(function (s) {
+        return "<li>" + s + "</li>";
+      }).join("");
+
+      app.innerHTML =
+        '<img class="hero" src="' + r.image + '" alt="' + r.name + '">' +
+        '<h1>' + r.name + '</h1>' +
+        '<span class="cat">' + r.category + '</span>' +
+        '<p>' + r.description + '</p>' +
+        '<div class="meta">' +
+          '<div>Prep<b>' + r.prepMin + ' min</b></div>' +
+          '<div>Cook<b>' + r.cookMin + ' min</b></div>' +
+          '<div>Total<b>' + (r.prepMin + r.cookMin) + ' min</b></div>' +
+          '<div>Difficulty<b>' + r.difficulty + '</b></div>' +
+        '</div>' +
+        '<h2>Ingredients (1 serving)</h2>' +
+        '<div class="box"><ul>' + ingredients + '</ul></div>' +
+        '<h2>Method</h2>' +
+        '<div class="box"><ol>' + steps + '</ol></div>' +
+        '<h2>Cooking tip</h2>' +
+        '<div class="tip">' + r.tips + '</div>' +
+        '<h2>Nutrition</h2>' +
+        '<div class="note">Nutrition information is coming soon.</div>' +
+        '<p class="source">Source: ' + r.source + '</p>';
+    }
+  </script>
+</body>
+</html>
