@@ -41,4 +41,224 @@
     <p>Welcome! Our recipe collection is coming soon.</p>
   </main>
 </body>
+</<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Peachy Plate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=DM+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --pink: #FDE2E4;
+      --cream: #FFF8EC;
+      --peach: #FFD6A5;
+      --butter: #FFF1B8;
+      --sage: #CFE3C8;
+      --lavender: #E3D9F2;
+      --text: #5A4A42;
+      --accent: #C77D6B;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 12px;
+      background: var(--lavender);
+    }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 20px;
+      background: var(--cream);
+      font-size: 0.95rem;
+    }
+    header {
+      background: var(--pink);
+      padding: 40px 20px;
+      border-bottom: 6px dotted var(--peach);
+    }
+    .logo { width: 84px; height: 84px; }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.6rem;
+      margin: 8px 0 0;
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin: 0 0 6px;
+    }
+    .tagline {
+      font-family: 'Caveat', cursive;
+      font-size: 1.9rem;
+      color: var(--accent);
+      margin: 6px 0 20px;
+    }
+    .note {
+      font-family: 'Caveat', cursive;
+      font-size: 1.4rem;
+      color: var(--accent);
+      margin: 0 0 18px;
+    }
+    .search {
+      width: 100%;
+      max-width: 420px;
+      padding: 14px 18px;
+      border: 2px solid var(--peach);
+      border-radius: 30px;
+      font-size: 1rem;
+      font-family: inherit;
+      background: var(--cream);
+    }
+    .auth { margin-top: 18px; }
+    .btn {
+      display: inline-block;
+      padding: 10px 22px;
+      margin: 4px;
+      border-radius: 24px;
+      text-decoration: none;
+      color: var(--text);
+      background: var(--butter);
+      font-weight: 600;
+    }
+    .btn.alt { background: var(--sage); }
+    section { padding: 36px 18px; max-width: 900px; margin: 0 auto; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    @media (min-width: 700px) {
+      .grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .cat {
+      padding: 28px 10px;
+      border-radius: 18px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      transform: rotate(-1deg);
+    }
+    .cat:nth-child(even) { transform: rotate(1deg); }
+    .c1 { background: var(--pink); }
+    .c2 { background: var(--butter); }
+    .c3 { background: var(--sage); }
+    .c4 { background: var(--lavender); }
+    .c5 { background: var(--peach); }
+    .card {
+      background: #fff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(90, 74, 66, 0.12);
+      text-align: left;
+    }
+    .photo {
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Caveat', cursive;
+      font-size: 1.3rem;
+      color: var(--accent);
+    }
+    .card h3 {
+      margin: 0;
+      padding: 12px 14px 2px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+    }
+    .card p { margin: 0; padding: 0 14px 14px; font-size: 0.85rem; }
+    .about {
+      background: var(--butter);
+      border-radius: 24px;
+      margin: 12px 18px 36px;
+      max-width: none;
+    }
+    footer {
+      padding: 24px;
+      background: var(--lavender);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#categories">Categories</a>
+    <a href="#featured">Recipes</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <header>
+    <svg class="logo" viewBox="0 0 100 100" aria-label="Peachy Plate logo">
+      <circle cx="50" cy="54" r="40" fill="#FFD6A5"/>
+      <circle cx="50" cy="54" r="29" fill="#FFF8EC"/>
+      <path d="M50 18 C62 8 78 12 80 22 C68 28 56 26 50 18 Z" fill="#CFE3C8"/>
+      <circle cx="50" cy="54" r="12" fill="#FDE2E4"/>
+    </svg>
+    <h1>Peachy Plate</h1>
+    <p class="tagline">A little taste of happiness</p>
+    <input class="search" type="search" placeholder="Search recipes...">
+    <div class="auth">
+      <a class="btn" href="#">Log in</a>
+      <a class="btn alt" href="#">Sign up</a>
+    </div>
+  </header>
+
+  <section id="categories">
+    <h2>Explore Categories</h2>
+    <p class="note">find something yummy</p>
+    <div class="grid">
+      <div class="cat c1">Breakfast</div>
+      <div class="cat c2">Starters</div>
+      <div class="cat c3">Vegetarian</div>
+      <div class="cat c4">Non-Vegetarian</div>
+      <div class="cat c5">Main Courses</div>
+      <div class="cat c1">Snacks</div>
+      <div class="cat c2">Desserts</div>
+      <div class="cat c3">Bakery</div>
+      <div class="cat c4">Drinks</div>
+    </div>
+  </section>
+
+  <section id="featured">
+    <h2>Featured Recipes</h2>
+    <p class="note">fresh from the kitchen</p>
+    <div class="grid">
+      <div class="card">
+        <div class="photo c1">photo coming soon</div>
+        <h3>Fluffy Pancakes</h3>
+        <p>Breakfast</p>
+      </div>
+      <div class="card">
+        <div class="photo c3">photo coming soon</div>
+        <h3>Creamy Pasta</h3>
+        <p>Main Courses</p>
+      </div>
+      <div class="card">
+        <div class="photo c4">photo coming soon</div>
+        <h3>Iced Matcha</h3>
+        <p>Drinks</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Peachy Plate</h2>
+    <p>Peachy Plate is a little corner of the internet for food inspiration and your own recipe journal. Browse recipes from around the world, save your favourites and build your personal cookbook.</p>
+  </section>
+
+  <footer>Peachy Plate. A little taste of happiness.</footer>
+</body>
 </html>
+
