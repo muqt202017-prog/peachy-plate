@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Category | Peachy Plate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=DM+Sans&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --pink: #FDE2E4;
+      --cream: #FFF8EC;
+      --peach: #FFD6A5;
+      --butter: #FFF1B8;
+      --sage: #CFE3C8;
+      --lavender: #E3D9F2;
+      --text: #5A4A42;
+      --accent: #C77D6B;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      text-align: center;
+    }
+    nav {
+      padding: 12px;
+      background: var(--lavender);
+    }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 20px;
+      background: var(--cream);
+      font-size: 0.95rem;
+    }
+    header {
+      background: var(--pink);
+      padding: 32px 20px;
+      border-bottom: 6px dotted var(--peach);
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      margin: 0;
+    }
+    .note {
+      font-family: 'Caveat', cursive;
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin: 6px 0 0;
+    }
+    section { padding: 30px 18px; max-width: 900px; margin: 0 auto; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    @media (min-width: 700px) {
+      .grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: #fff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(90, 74, 66, 0.12);
+      text-align: left;
+    }
+    .photo { height: 170px; }
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .card h3 {
+      margin: 0;
+      padding: 12px 14px 2px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+    }
+    .card p { margin: 0; padding: 0 14px 14px; font-size: 0.85rem; }
+    .empty {
+      background: var(--butter);
+      border-radius: 18px;
+      padding: 24px 16px;
+    }
+  </style>
+</head>
+<body>
+  <nav><a href="index.html">Back to Peachy Plate</a></nav>
+
+  <header>
+    <h1 id="title">Category</h1>
+    <p class="note" id="count"></p>
+  </header>
+
+  <section>
+    <div class="grid" id="list"></div>
+    <div class="empty" id="empty" style="display:none;">
+      No recipes in this category yet. More are coming soon.
+    </div>
+  </section>
+
+  <script src="recipes.js"></script>
+  <script>
+    const name = new URLSearchParams(window.location.search).get("name");
+    const titleEl = document.getElementById("title");
+    const countEl = document.getElementById("count");
+    const listEl = document.getElementById("list");
+    const emptyEl = document.getElementById("empty");
+
+    if (!name) {
+      titleEl.textContent = "Category not found";
+    } else {
+      titleEl.textContent = name;
+      document.title = name + " | Peachy Plate";
+
+      const found = RECIPES.filter(function (r) {
+        return r.category.toLowerCase() === name.toLowerCase();
+      });
+
+      if (found.length === 0) {
+        emptyEl.style.display = "block";
+        countEl.textContent = "coming soon";
+      } else {
+        countEl.textContent = found.length + (found.length === 1 ? " recipe" : " recipes");
+        listEl.innerHTML = found.map(function (r) {
+          return '<a class="card" href="recipe.html?id=' + r.id + '">' +
+            '<div class="photo"><img src="' + r.image + '" alt="' + r.name + '"></div>' +
+            '<h3>' + r.name + '</h3>' +
+            '<p>' + r.prepMin + cookTotal(r) + ' min · ' + r.difficulty + '</p>' +
+          '</a>';
+        }).join("");
+      }
+    }
+
+    function cookTotal(r) {
+      return "+" + r.cookMin;
+    }
+  </script>
+</body>
+</html>
