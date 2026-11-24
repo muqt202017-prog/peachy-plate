@@ -82,3 +82,6 @@ const RECIPES = [
     source: "Peachy Plate original recipe"
   }
 ];
+document.write('<script src="recipes-indian.js"><\/script>');
+
+
