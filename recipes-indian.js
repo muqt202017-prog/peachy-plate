@@ -1,0 +1,323 @@
+RECIPES.push(
+  {
+    id: "poha",
+    name: "Poha",
+    cuisine: "Indian",
+    category: "Breakfast",
+    image: "placeholder.svg",
+    description: "A light, quick Indian breakfast of flattened rice with peanuts, curry leaves and lemon.",
+    prepMin: 10,
+    cookMin: 12,
+    difficulty: "Easy",
+    ingredients: [
+      { name: "thick poha (flattened rice)", qty: 60, unit: "g" },
+      { name: "onion, chopped", qty: 30, unit: "g" },
+      { name: "potato, finely diced", qty: 30, unit: "g" },
+      { name: "peanuts", qty: 1, unit: "tbsp" },
+      { name: "oil", qty: 1, unit: "tbsp" },
+      { name: "mustard seeds", qty: 0.5, unit: "tsp" },
+      { name: "curry leaves", qty: 5, unit: "" },
+      { name: "green chilli, chopped", qty: 1, unit: "" },
+      { name: "turmeric", qty: 0.25, unit: "tsp" },
+      { name: "salt", qty: 0.25, unit: "tsp" },
+      { name: "lemon juice", qty: 1, unit: "tsp" },
+      { name: "fresh coriander, chopped", qty: 1, unit: "tbsp" }
+    ],
+    steps: [
+      "Rinse the poha in a sieve under cold water until soft. Drain well and rest for 5 minutes.",
+      "Heat the oil in a pan. Add the mustard seeds and let them pop.",
+      "Add the peanuts, curry leaves and green chilli and cook for 1 minute.",
+      "Add the onion and potato. Cover and cook on low heat for 8 minutes until the potato is tender.",
+      "Stir in the turmeric and salt, then add the poha and mix gently for 2 minutes.",
+      "Finish with lemon juice and fresh coriander."
+    ],
+    tips: "Do not soak the poha. A quick rinse keeps it fluffy instead of mushy.",
+    source: "Peachy Plate adaptation of a traditional Indian recipe"
+  },
+  {
+    id: "masala-omelette",
+    name: "Masala Omelette",
+    cuisine: "Indian",
+    category: "Breakfast",
+    image: "placeholder.svg",
+    description: "A spiced Indian-style omelette with onion, tomato, chilli and coriander.",
+    prepMin: 5,
+    cookMin: 5,
+    difficulty: "Easy",
+    ingredients: [
+      { name: "eggs", qty: 2, unit: "" },
+      { name: "onion, finely chopped", qty: 20, unit: "g" },
+      { name: "tomato, finely chopped", qty: 20, unit: "g" },
+      { name: "green chilli, chopped", qty: 1, unit: "" },
+      { name: "fresh coriander, chopped", qty: 1, unit: "tbsp" },
+      { name: "red chilli powder", qty: 0.25, unit: "tsp" },
+      { name: "salt", qty: 0.25, unit: "tsp" },
+      { name: "oil", qty: 1, unit: "tsp" }
+    ],
+    steps: [
+      "Beat the eggs with the salt and chilli powder.",
+      "Stir in the onion, tomato, green chilli and coriander.",
+      "Heat the oil in a non-stick pan on medium heat.",
+      "Pour in the egg mix and spread it evenly.",
+      "Cook for 2 minutes, flip, and cook 1 to 2 minutes more until set.",
+      "Serve hot with toast."
+    ],
+    tips: "Pat the chopped tomato dry so the omelette does not turn watery.",
+    source: "Peachy Plate adaptation of a traditional Indian recipe"
+  },
+  {
+    id: "tomato-rasam",
+    name: "Tomato Rasam",
+    cuisine: "Indian",
+    category: "Starters",
+    image: "placeholder.svg",
+    description: "A tangy, peppery South Indian tomato soup, light and warming.",
+    prepMin: 5,
+    cookMin: 20,
+    difficulty: "Easy",
+    ingredients: [
+      { name: "ripe tomato, chopped", qty: 100, unit: "g" },
+      { name: "water", qty: 250, unit: "ml" },
+      { name: "tamarind paste", qty: 0.5, unit: "tsp" },
+      { name: "rasam powder", qty: 1, unit: "tsp" },
+      { name: "turmeric", qty: 0.25, unit: "tsp" },
+      { name: "garlic clove, crushed", qty: 1, unit: "" },
+      { name: "oil", qty: 1, unit: "tsp" },
+      { name: "mustard seeds", qty: 0.5, unit: "tsp" },
+      { name: "cumin seeds", qty: 0.5, unit: "tsp" },
+      { name: "curry leaves", qty: 5, unit: "" },
+      { name: "salt", qty: 0.25, unit: "tsp" },
+      { name: "fresh coriander, chopped", qty: 1, unit: "tbsp" }
+    ],
+    steps: [
+      "Add the tomato, water, tamarind, rasam powder, turmeric and salt to a pot.",
+      "Bring to a boil, then simmer gently for 12 minutes until the tomato is soft.",
+      "Lightly mash the tomato with a spoon.",
+      "In a small pan, heat the oil and add the mustard seeds, cumin, garlic and curry leaves until fragrant.",
+      "Pour this tempering into the rasam and simmer for 2 minutes.",
+      "Top with coriander and serve hot."
+    ],
+    tips: "Do not boil rasam hard after adding the tempering, or the flavour turns flat.",
+    source: "Peachy Plate adaptation of a traditional Indian recipe"
+  },
+  {
+    id: "chana-masala",
+    name: "Chana Masala",
+    cuisine: "Indian",
+    category: "Vegetarian",
+    image: "placeholder.svg",
+    description: "Chickpeas simmered in a spiced tomato and onion gravy. Vegetarian and hearty.",
+    prepMin: 10,
+    cookMin: 25,
+    difficulty: "Easy",
+    ingredients: [
+      { name: "cooked chickpeas (canned is fine, drained)", qty: 150, unit: "g" },
+      { name: "onion, finely chopped", qty: 50, unit: "g" },
+      { name: "tomato, chopped", qty: 80, unit: "g" },
+      { name: "garlic clove, minced", qty: 1, unit: "" },
+      { name: "fresh ginger, grated", qty: 0.5, unit: "tsp" },
+      { name: "oil", qty: 1, unit: "tbsp" },
+      { name: "cumin seeds", qty: 0.5, unit: "tsp" },
+      { name: "coriander powder", qty: 1, unit: "tsp" },
+      { name: "garam masala", qty: 0.5, unit: "tsp" },
+      { name: "turmeric", qty: 0.25, unit: "tsp" },
+      { name: "red chilli powder", qty: 0.25, unit: "tsp" },
+      { name: "salt", qty: 0.25, unit: "tsp" },
+      { name: "water", qty: 100, unit: "ml" },
+      { name: "lemon juice", qty: 1, unit: "tsp" }
+    ],
+    steps: [
+      "Heat the oil and add the cumin seeds until they sizzle.",
+      "Add the onion and cook until golden, about 6 minutes.",
+      "Stir in the garlic and ginger and cook for 1 minute.",
+      "Add the tomato, coriander powder, turmeric, chilli powder and salt. Cook until soft and jammy, about 6 minutes.",
+      "Add the chickpeas and water. Simmer for 10 minutes, lightly mashing a few chickpeas to thicken.",
+      "Stir in the garam masala and lemon juice. Serve with rice or flatbread."
+    ],
+    tips: "Mash a spoonful of chickpeas into the gravy to make it naturally thick.",
+    source: "Peachy Plate adaptation of a traditional Indian recipe"
+  },
+  {
+    id: "dal-tadka",
+    name: "Dal Tadka",
+    cuisine: "Indian",
+    category: "Vegetarian",
+    image: "placeholder.svg",
+    description: "Soft red lentils finished with a sizzling garlic and cumin tempering.",
+    prepMin: 10,
+    cookMin: 25,
+    difficulty: "Easy",
+    ingredients: [
+      { name: "red lentils (masoor dal), rinsed", qty: 50, unit: "g" },
+      { name: "water", qty: 250, unit: "ml" },
+      { name: "turmeric", qty: 0.25, unit: "tsp" },
+      { name: "salt", qty: 0.25, unit: "tsp" },
+      { name: "tomato, chopped", qty: 40, unit: "g" },
+      { name: "onion, chopped", qty: 30, unit: "g" },
+      { name: "ghee or oil", qty: 1, unit: "tbsp" },
+      { name: "cumin seeds", qty: 0.5, unit: "tsp" },
+      { name: "garlic clove, sliced", qty: 1, unit: "" },
+      { name: "dried red chilli", qty: 1, unit: "" },
+      { name: "fresh coriander, chopped", qty: 1, unit: "tbsp" }
+    ],
+    steps: [
+      "Simmer the lentils with the water, turmeric, salt and tomato for 15 to 18 minutes until soft.",
+      "Whisk the dal lightly until creamy. Add a splash of water if too thick.",
+      "Heat the ghee in a small pan. Add the cumin seeds, garlic, dried chilli and onion.",
+      "Cook until the onion and garlic turn golden.",
+      "Pour the sizzling tempering over the dal and stir.",
+      "Top with coriander and serve with rice."
+    ],
+    tips: "Skim off any foam while the lentils cook for a cleaner taste.",
+    source: "Peachy Plate adaptation of a traditional Indian recipe"
+  },
+  {
+    id: "chicken-curry",
+    name: "Home-style Chicken Curry",
+    cuisine: "Indian",
+    category: "Non-Vegetarian",
+    image: "placeholder.svg",
+    description: "A comforting Indian chicken curry in a spiced onion and tomato gravy.",
+    prepMin: 15,
+    cookMin: 30,
+    difficulty: "Medium",
+    ingredients: [
+      { name: "boneless chicken thigh, cubed", qty: 150, unit: "g" },
+      { name: "onion, finely chopped", qty: 60, unit: "g" },
+      { name: "tomato, chopped", qty: 80, unit: "g" },
+      { name: "garlic clove, minced", qty: 1, unit: "" },
+      { name: "fresh ginger, grated", qty: 0.5, unit: "tsp" },
+      { name: "oil", qty: 1, unit: "tbsp" },
+      { name: "cumin seeds", qty: 0.5, unit: "tsp" },
+      { name: "coriander powder", qty: 1, unit: "tsp" },
+      { name: "turmeric", qty: 0.25, unit: "tsp" },
+      { name: "red chilli powder", qty: 0.5, unit: "tsp" },
+      { name: "plain yogurt", qty: 1, unit: "tbsp" },
+      { name: "garam masala", qty: 0.5, unit: "tsp" },
+      { name: "salt", qty: 0.25, unit: "tsp" },
+      { name: "water", qty: 100, unit: "ml" }
+    ],
+    steps: [
+      "Heat the oil and add the cumin seeds until they sizzle.",
+      "Cook the onion until golden brown, about 8 minutes.",
+      "Add the garlic and ginger and cook for 1 minute.",
+      "Add the tomato, coriander powder, turmeric, chilli powder and salt. Cook until the oil separates.",
+      "Add the chicken and yogurt and stir well to coat. Cook for 5 minutes.",
+      "Pour in the water, cover and simmer for 15 minutes until the chicken is cooked through with no pink inside.",
+      "Stir in the garam masala and serve with rice or flatbread."
+    ],
+    tips: "Chicken is safe when the thickest piece reaches 75 degrees Celsius inside.",
+    source: "Peachy Plate adaptation of a traditional Indian recipe"
+  },
+  {
+    id: "jeera-rice",
+    name: "Jeera Rice",
+    cuisine: "Indian",
+    category: "Main Courses",
+    image: "placeholder.svg",
+    description: "Fragrant basmati rice tempered with cumin seeds and a bay leaf.",
+    prepMin: 5,
+    cookMin: 15,
+    difficulty: "Easy",
+    ingredients: [
+      { name: "basmati rice", qty: 60, unit: "g" },
+      { name: "water", qty: 120, unit: "ml" },
+      { name: "ghee or oil", qty: 1, unit: "tsp" },
+      { name: "cumin seeds", qty: 0.5, unit: "tsp" },
+      { name: "bay leaf", qty: 1, unit: "" },
+      { name: "salt", qty: 0.25, unit: "tsp" }
+    ],
+    steps: [
+      "Rinse the rice until the water runs almost clear. Drain.",
+      "Heat the ghee in a small pot and add the cumin seeds and bay leaf until fragrant.",
+      "Add the rice and stir for 1 minute.",
+      "Add the water and salt and bring to a boil.",
+      "Cover, reduce to the lowest heat and cook for 12 minutes.",
+      "Rest for 5 minutes, then fluff with a fork."
+    ],
+    tips: "Do not lift the lid while cooking so the steam stays in.",
+    source: "Peachy Plate adaptation of a traditional Indian recipe"
+  },
+  {
+    id: "suji-halwa",
+    name: "Suji Halwa",
+    cuisine: "Indian",
+    category: "Desserts",
+    image: "placeholder.svg",
+    description: "A warm, buttery semolina pudding with cardamom and almonds.",
+    prepMin: 5,
+    cookMin: 12,
+    difficulty: "Easy",
+    ingredients: [
+      { name: "semolina (suji)", qty: 40, unit: "g" },
+      { name: "ghee", qty: 2, unit: "tbsp" },
+      { name: "sugar", qty: 30, unit: "g" },
+      { name: "hot water", qty: 150, unit: "ml" },
+      { name: "cardamom powder", qty: 1, unit: "pinch" },
+      { name: "almonds, chopped", qty: 1, unit: "tbsp" }
+    ],
+    steps: [
+      "Heat the ghee in a pan on medium-low heat.",
+      "Add the semolina and roast, stirring, for 6 to 7 minutes until fragrant and light golden.",
+      "Carefully pour in the hot water. It will sputter, so stand back.",
+      "Add the sugar and cardamom and stir until thick, about 3 minutes.",
+      "Top with chopped almonds and serve warm."
+    ],
+    tips: "Roasting the semolina patiently gives the best flavour.",
+    source: "Peachy Plate adaptation of a traditional Indian recipe"
+  },
+  {
+    id: "masala-chai",
+    name: "Masala Chai",
+    cuisine: "Indian",
+    category: "Drinks",
+    image: "placeholder.svg",
+    description: "Spiced Indian milk tea with ginger and cardamom.",
+    prepMin: 2,
+    cookMin: 6,
+    difficulty: "Easy",
+    ingredients: [
+      { name: "water", qty: 100, unit: "ml" },
+      { name: "milk", qty: 100, unit: "ml" },
+      { name: "black tea leaves", qty: 1, unit: "tsp" },
+      { name: "sugar", qty: 1, unit: "tsp" },
+      { name: "fresh ginger, grated", qty: 0.5, unit: "tsp" },
+      { name: "cardamom pod, lightly crushed", qty: 1, unit: "" }
+    ],
+    steps: [
+      "Boil the water with the ginger and cardamom for 2 minutes.",
+      "Add the tea leaves and simmer for 1 minute.",
+      "Pour in the milk and sugar and bring just to the edge of boiling.",
+      "Simmer gently for 2 minutes, then strain into a cup."
+    ],
+    tips: "Watch the pot once the milk goes in, because it boils over quickly.",
+    source: "Peachy Plate adaptation of a traditional Indian recipe"
+  },
+  {
+    id: "mango-lassi",
+    name: "Mango Lassi",
+    cuisine: "Indian",
+    category: "Drinks",
+    image: "placeholder.svg",
+    description: "A cool, creamy yogurt and mango drink.",
+    prepMin: 5,
+    cookMin: 0,
+    difficulty: "Easy",
+    ingredients: [
+      { name: "ripe mango pulp or chopped mango", qty: 100, unit: "g" },
+      { name: "plain yogurt", qty: 150, unit: "g" },
+      { name: "milk", qty: 50, unit: "ml" },
+      { name: "honey or sugar", qty: 1, unit: "tsp" },
+      { name: "cardamom powder", qty: 1, unit: "pinch" },
+      { name: "ice cubes", qty: 3, unit: "" }
+    ],
+    steps: [
+      "Add the mango, yogurt, milk, honey and cardamom to a blender.",
+      "Blend until smooth and creamy.",
+      "Add the ice cubes and blend briefly.",
+      "Pour into a glass and serve cold."
+    ],
+    tips: "Taste your mango first. If it is very sweet, skip the honey.",
+    source: "Peachy Plate adaptation of a traditional Indian recipe"
+  }
+);
