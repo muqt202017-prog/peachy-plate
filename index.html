@@ -100,6 +100,9 @@
       .grid { grid-template-columns: repeat(3, 1fr); }
     }
     .cat {
+      display: block;
+      text-decoration: none;
+      color: var(--text);
       padding: 28px 10px;
       border-radius: 18px;
       font-family: 'Playfair Display', serif;
@@ -192,15 +195,15 @@
     <h2>Explore Categories</h2>
     <p class="note">find something yummy</p>
     <div class="grid">
-      <div class="cat c1">Breakfast</div>
-      <div class="cat c2">Starters</div>
-      <div class="cat c3">Vegetarian</div>
-      <div class="cat c4">Non-Vegetarian</div>
-      <div class="cat c5">Main Courses</div>
-      <div class="cat c1">Snacks</div>
-      <div class="cat c2">Desserts</div>
-      <div class="cat c3">Bakery</div>
-      <div class="cat c4">Drinks</div>
+      <a class="cat c1" href="category.html?name=Breakfast">Breakfast</a>
+      <a class="cat c2" href="category.html?name=Starters">Starters</a>
+      <a class="cat c3" href="category.html?name=Vegetarian">Vegetarian</a>
+      <a class="cat c4" href="category.html?name=Non-Vegetarian">Non-Vegetarian</a>
+      <a class="cat c5" href="category.html?name=Main%20Courses">Main Courses</a>
+      <a class="cat c1" href="category.html?name=Snacks">Snacks</a>
+      <a class="cat c2" href="category.html?name=Desserts">Desserts</a>
+      <a class="cat c3" href="category.html?name=Bakery">Bakery</a>
+      <a class="cat c4" href="category.html?name=Drinks">Drinks</a>
     </div>
   </section>
 
