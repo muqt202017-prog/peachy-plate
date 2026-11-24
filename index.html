@@ -113,6 +113,9 @@
     .c4 { background: var(--lavender); }
     .c5 { background: var(--peach); }
     .card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
       background: #fff;
       border-radius: 18px;
       overflow: hidden;
@@ -190,21 +193,21 @@
     <h2>Featured Recipes</h2>
     <p class="note">fresh from the kitchen</p>
     <div class="grid">
-      <div class="card">
+      <a class="card" href="recipe.html?id=fluffy-pancakes">
         <div class="photo"><img src="jaqueline-pelzer-MytHEJlzdcM-unsplash.jpg" alt="Fluffy pancakes with raspberries"></div>
         <h3>Fluffy Pancakes</h3>
         <p>Breakfast</p>
-      </div>
-      <div class="card">
+      </a>
+      <a class="card" href="recipe.html?id=creamy-chicken-pasta">
         <div class="photo"><img src="sama-hosseini-wTBGTwHlf0c-unsplash.jpg" alt="Creamy chicken pasta"></div>
         <h3>Creamy Pasta</h3>
         <p>Main Courses</p>
-      </div>
-      <div class="card">
+      </a>
+      <a class="card" href="recipe.html?id=iced-matcha">
         <div class="photo"><img src="denise-teix-YE1HcXXvnes-unsplash.jpg" alt="Iced matcha latte"></div>
         <h3>Iced Matcha</h3>
         <p>Drinks</p>
-      </div>
+      </a>
     </div>
   </section>
 
