@@ -136,6 +136,13 @@
       font-size: 1.05rem;
     }
     .card p { margin: 0; padding: 0 14px 14px; font-size: 0.85rem; }
+    #results {
+      display: none;
+      background: var(--butter);
+      max-width: none;
+      padding: 28px 18px;
+    }
+    #results .inner { max-width: 900px; margin: 0 auto; }
     .about {
       background: var(--butter);
       border-radius: 24px;
@@ -166,12 +173,20 @@
     </svg>
     <h1>Peachy Plate</h1>
     <p class="tagline">A little taste of happiness</p>
-    <input class="search" type="search" placeholder="Search recipes...">
+    <input id="searchBox" class="search" type="search" placeholder="Search recipes, ingredients, categories...">
     <div class="auth">
       <a class="btn" href="#">Log in</a>
       <a class="btn alt" href="#">Sign up</a>
     </div>
   </header>
+
+  <section id="results">
+    <div class="inner">
+      <h2>Search Results</h2>
+      <p class="note" id="resultsNote"></p>
+      <div class="grid" id="resultsGrid"></div>
+    </div>
+  </section>
 
   <section id="categories">
     <h2>Explore Categories</h2>
@@ -217,5 +232,43 @@
   </section>
 
   <footer>Peachy Plate. A little taste of happiness.</footer>
+
+  <script src="recipes.js"></script>
+  <script>
+    const box = document.getElementById("searchBox");
+    const results = document.getElementById("results");
+    const grid = document.getElementById("resultsGrid");
+    const noteEl = document.getElementById("resultsNote");
+
+    function searchText(r) {
+      const ing = r.ingredients.map(function (i) { return i.name; }).join(" ");
+      return (r.name + " " + r.category + " " + r.description + " " + ing).toLowerCase();
+    }
+
+    box.addEventListener("input", function () {
+      const q = box.value.trim().toLowerCase();
+      if (!q) {
+        results.style.display = "none";
+        return;
+      }
+      const found = RECIPES.filter(function (r) {
+        return searchText(r).indexOf(q) !== -1;
+      });
+      results.style.display = "block";
+      if (found.length === 0) {
+        noteEl.textContent = "No recipes found. Try another word.";
+        grid.innerHTML = "";
+        return;
+      }
+      noteEl.textContent = found.length + (found.length === 1 ? " recipe found" : " recipes found");
+      grid.innerHTML = found.map(function (r) {
+        return '<a class="card" href="recipe.html?id=' + r.id + '">' +
+          '<div class="photo"><img src="' + r.image + '" alt="' + r.name + '"></div>' +
+          '<h3>' + r.name + '</h3>' +
+          '<p>' + r.category + '</p>' +
+        '</a>';
+      }).join("");
+    });
+  </script>
 </body>
 </html>
